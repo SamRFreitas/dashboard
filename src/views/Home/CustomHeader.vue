@@ -9,11 +9,13 @@
         <div class="flex">
           <button
             class="px-6 py-2 font-bold rounded-full text-white focus:outline-none"
+            @click="() => emit('create-account')"
           >
             Crie uma conta
           </button>
           <button
             class="px-6 py-2 font-bold bg-white rounded-full text-brand-main focus:outline-none"
+            @click="() => emit('login')"
           >
             Entrar
           </button>
@@ -41,6 +43,13 @@
     </div>
   </header>
 </template>
+<script>
+export default {
+  setup (_, { emit }) {
+    return { emit }
+  }
+}
+</script>
 <style lang="postcss" scoped>
   .header {
     @apply bg-brand-main w-full flex justify-center;
