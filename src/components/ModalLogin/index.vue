@@ -56,7 +56,8 @@
           'opacity-50': state.isLoading
         }"
       >
-        Entrar
+        <icon v-if="state.isLoading" name="loading" class="animate-spin" />
+        <span v-else >Entrar</span>
       </button>
     </form>
   </div>
@@ -68,10 +69,12 @@ import { useRouter } from 'vue-router'
 import { useField } from 'vee-validate'
 import { useToast } from 'vue-toastification'
 import useModal from '../../hooks/useModal'
+import Icon from '../Icon'
 import { validateEmptyAndLength3, validateEmptyAndEmail } from '../../utils/validators'
 import services from '../../services'
 
 export default {
+  components: { Icon },
   setup () {
     const modal = useModal()
     const router = useRouter()
@@ -108,7 +111,6 @@ export default {
         })
 
         if (!errors) {
-          console.log('entrou no iff sem errors')
           window.localStorage.setItem('token', data.token)
           router.push({ name: 'Feedbacks' })
           state.isLoading = false
