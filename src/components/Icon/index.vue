@@ -4,6 +4,7 @@
 
 <script>
 import Loading from './Loading'
+import Copy from './Copy'
 export default {
   props: {
     name: {
@@ -11,6 +12,6 @@ export default {
       required: true
     }
   },
-  components: { Loading }
+  components: { Loading, Copy }
 }
 </script>
