@@ -4,9 +4,9 @@
       width: computedWidth,
       height
     }"
-    class="opacity-75   r"
+    class="opacity-75 content-loader"
   >
-    <span :style="{ animationDuration }" class="content-loader--fx" />
+    <span :style="{ animationDuration }" class="content-loader--fx"/>
     <slot />
   </div>
 </template>
@@ -28,25 +28,23 @@ export default {
       default: '1.6s'
     },
     height: {
-      deafult: '1rem',
+      default: '1rem',
       type: String
     },
     width: {
-      deafult: '1',
+      default: '1rem',
       type: String
     }
   },
   setup (props) {
     const computedWidth = computed(() => {
       const value = Math.random() * (props.width - props.minWidth)
-      return props.width ?? `${Math.floor(value + props.minWidth)}`
+      return props.width ?? `${Math.floor(value + props.minWidth)}%`
     })
-
     return { computedWidth }
   }
 }
 </script>
-
 <style lang="postcss" scoped>
 @keyframes shimmer {
   100% {
