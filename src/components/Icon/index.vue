@@ -5,6 +5,7 @@
 <script>
 import Loading from './Loading'
 import Copy from './Copy'
+import ChevronDown from './ChevronDown'
 export default {
   props: {
     name: {
@@ -12,6 +13,6 @@ export default {
       required: true
     }
   },
-  components: { Loading, Copy }
+  components: { Loading, Copy, ChevronDown }
 }
 </script>
