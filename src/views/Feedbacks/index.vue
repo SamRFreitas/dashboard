@@ -37,7 +37,7 @@
           Aconteceu um erro ao carregar os feedbacks :(!
         </p>
         <p
-          v-if="state.feedbacks.length && !state.isLoading"
+          v-if="!state.feedbacks.length && !state.isLoading"
           class="text-lg text-center text-gray-800 font-regular"
         >
          Nenhum feedback foi recebido ainda!
