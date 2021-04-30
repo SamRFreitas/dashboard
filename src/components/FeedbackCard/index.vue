@@ -51,7 +51,7 @@
 import Icon from '../Icon'
 import Badge from './Badge'
 import { getDiffTimeBetweenCurrentDate } from '../../utils/date.js'
-import pallet from '../../../palette'
+import palett from '../../../palette'
 import { reactive } from 'vue'
 import { wait } from '../../utils/timeout'
 export default {
@@ -76,7 +76,7 @@ export default {
       state,
       handleToggle,
       getDiffTimeBetweenCurrentDate,
-      brandColors: pallet.brand
+      brandColors: palett.brand
     }
   }
 }
